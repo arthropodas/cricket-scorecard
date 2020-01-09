@@ -69,7 +69,7 @@ export default function CustomizedTables() {
               <StyledTableCell align="right">{row.Balls}</StyledTableCell>
               <StyledTableCell align="right">{row.four}</StyledTableCell>
               <StyledTableCell align="right">{row.six}</StyledTableCell>
-              <StyledTableCell align="right">{row.RunRate}</StyledTableCell>
+              <StyledTableCell align="right">{row.Runs / row.Balls * 100}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
