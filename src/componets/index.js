@@ -120,8 +120,6 @@ class ScoreCard extends Component {
     }
   
     render() {
-        const CRR = this.state.runRate * (Country2.score2nd % Country2.overs)
-        console.log('gfc', CRR);
       return (
         <Container>
           <SubContainer>
@@ -135,7 +133,7 @@ class ScoreCard extends Component {
                 <div>
                     <h2 className="country-with-scores2" key={key}>
                         {Country.value} {Country.score1st}{Country.allout1st}, {Country.score2nd}/{Country.wic2nd} ({Country.overs})
-                        <span>CRR: {CRR}</span>
+                        <span>CRR: {Country.score2nd / Country.overs}</span>
                     </h2>
                     <div className="runs-to-win" key={key}>
                         Day 4: Stumps - {Country.name} need 316 runs to win
