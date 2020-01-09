@@ -35,7 +35,6 @@ const rows = [
   createData('Pieter Malan', 63, 73, 2, 0, 32.64),
   createData('Keshav Maharaj', 2, 9, 0, 0, 22.22),
 ];
-//hardcoded Batsman here.
 
 const useStyles = makeStyles({
   table: {

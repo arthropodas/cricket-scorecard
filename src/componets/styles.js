@@ -34,6 +34,19 @@ export const SubContainer = styled.div`
         color: blue;
         text-decoration: none;
     }
+    .squad-router {
+        background: #159354;
+        color: #fff;
+        margin-top: 10px;
+        float: right;
+        width: 80px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    .eng {
+        background: #5C8EC1;
+    }
     .country-with-scores {
         color: #666
         font-size: 16px;
@@ -75,17 +88,16 @@ export const SubContainer = styled.div`
         font-size: 14px;
         font-weight: 900;
     }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
 `;
-export const Footer = styled.div`
-    backgroundColor: #F8F8F8;
-    borderTop: 1px solid #E7E7E7;
-    textAlign: center;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    display: 'block',
-    height: '60px',
+
+export const Divider = styled.hr`
+    border-color: #ccc;
+    border-style: solid;
+    border-bottom: 0;
+    margin-bottom: 40px;
+    margin-top: 0;
 `;

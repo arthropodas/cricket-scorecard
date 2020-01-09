@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { Container, SubContainer, Footer } from './styles';
+import { Container, SubContainer, Divider } from './styles';
+import history from '../history';
 import Batsman from './Batsman';
 import Bowler from './Bowler';
 
@@ -120,6 +122,8 @@ class ScoreCard extends Component {
     }
   
     render() {
+        const CRR = this.state.runRate * (Country2.score2nd % Country2.overs)
+        console.log('gfc', CRR);
       return (
         <Container>
           <SubContainer>
@@ -141,9 +145,11 @@ class ScoreCard extends Component {
                 </div>
             )})}
             <Batsman />
+            <button className="squad-router" onClick={() => { history.push('/RSA') }}>SQUAD</button>
             <hr></hr>
             <Bowler />
-            <hr />
+            <button className="squad-router eng" onClick={() => { history.push('/ENG') }}>SQUAD</button>
+            <Divider />
             <p className="select-field-feed">Choose any one to add!</p>
             <form onSubmit={this.handleSubmit}>
                 <select className="comm-selector" value={this.state.value} onChange={this.handleChange}>
@@ -159,11 +165,10 @@ class ScoreCard extends Component {
             {Commentory.map((Commentory, key) => {
                 return (
                 <div className="country-with-scores2" key={key}>
-                        <p className= "commentory">{Commentory.over} <span>{Commentory.comm}</span></p>
+                    <p className= "commentory">{Commentory.over} <span>{Commentory.comm}</span></p>
                 </div>
             )})}
           </SubContainer>
-          <Footer />
         </Container>
       );
     }

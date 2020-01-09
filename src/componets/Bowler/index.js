@@ -35,7 +35,6 @@ const rows = [
   createData('James Anderson', 9, 1, 54, 1, 6.00),
   createData('Sam Curran', 2.2, 0, 10, 1, 5.00),
 ];
-//Hardcoded Bowler here.
 
 const useStyles = makeStyles({
   table: {
