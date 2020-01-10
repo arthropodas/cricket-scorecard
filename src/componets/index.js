@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { Container, SubContainer, Divider } from './styles';
+import { Container, SubContainer } from './styles';
 import history from '../history';
 import Batsman from './Batsman';
 import Bowler from './Bowler';
@@ -122,8 +122,6 @@ class ScoreCard extends Component {
     }
   
     render() {
-        const CRR = this.state.runRate * (Country2.score2nd % Country2.overs)
-        console.log('gfc', CRR);
       return (
         <Container>
           <SubContainer>
@@ -149,7 +147,6 @@ class ScoreCard extends Component {
             <hr></hr>
             <Bowler />
             <button className="squad-router eng" onClick={() => { history.push('/ENG') }}>SQUAD</button>
-            <Divider />
             <p className="select-field-feed">Choose any one to add!</p>
             <form onSubmit={this.handleSubmit}>
                 <select className="comm-selector" value={this.state.value} onChange={this.handleChange}>
@@ -159,7 +156,8 @@ class ScoreCard extends Component {
                 </select>
             </form>
             <hr />
-            <div>
+            <p className="link-upcoming-match" onClick={() => { history.push('/matches') }}>Upcoming</p>
+            <div className="dropdown-select-message">
                 {this.state.value}
             </div>
             {Commentory.map((Commentory, key) => {
