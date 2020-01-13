@@ -157,7 +157,10 @@ class ScoreCard extends Component {
             </form>
             <hr />
             <p className="link-upcoming-match" onClick={() => { history.push('/matches') }}>Upcoming</p>
+<<<<<<< HEAD
             <p className="link-upcoming-match" onClick={() => { history.push('/profile') }}>Player of All Time!</p>
+=======
+>>>>>>> 7594219bc9143ad8e96ace14c1258ca5bce66a74
             <div className="dropdown-select-message">
                 {this.state.value}
             </div>

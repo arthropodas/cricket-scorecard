@@ -8,7 +8,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.1",
+<<<<<<< HEAD
     "eslint": "^6.8.0",
+=======
+>>>>>>> 7594219bc9143ad8e96ace14c1258ca5bce66a74
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
