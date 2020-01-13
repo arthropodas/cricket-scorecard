@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { Container, SubContainer, Divider} from '../styles';
+import { Container, SubContainer, Divider, Teamscard} from '../styles';
 import { Teams } from './style'
+import history from '../../history';
 import bat from '../../static/bat.svg';
 import ball from '../../static/ball.svg';
 import wk from '../../static/wk.svg';
@@ -25,34 +27,43 @@ class RSA extends Component {
         return (
             <Container>
                 <SubContainer>
+                    <a onClick={() => { history.push('/') }}>---Back---</a>
                     <Teams>
                         <h1 className="batsman-bowler-all">Batsman</h1>
-                        {Batsman.map((bats, key) => (
-                            <h3 key={key}>
-                                <img className="icon" src={bat} alt="bat" />{bats}
-                            </h3>
-                        ))}
+                        <Teamscard>
+                            {Batsman.map((bats, key) => (
+                                <h3 key={key}>
+                                    <img className="icon" src={bat} alt="bat" />{bats}
+                                </h3>
+                            ))}
+                        </Teamscard>
                         <Divider />
                         <h1 className="batsman-bowler-all">All Rounder</h1>
-                        {AllRounder.map((all, key) => (
-                            <h3 key={key}>
-                                <img className="icon" src={batball} alt="bat" />{all}
-                            </h3>
-                        ))}
+                        <Teamscard>
+                            {AllRounder.map((all, key) => (
+                                <h3 key={key}>
+                                    <img className="icon" src={batball} alt="bat" />{all}
+                                </h3>
+                            ))}
+                        </Teamscard>
                         <Divider />
                         <h1 className="batsman-bowler-all">Wicket Keeper</h1>
-                        {Wk.map((Wk, key) => (
-                            <h3 key={key}>
-                                <img className="icon" src={wk} alt="bat" />{Wk}
-                            </h3>
-                        ))}
+                        <Teamscard>
+                            {Wk.map((Wk, key) => (
+                                <h3 key={key}>
+                                    <img className="icon" src={wk} alt="bat" />{Wk}
+                                </h3>
+                            ))}
+                        </Teamscard>
                         <Divider />
                         <h1 className="batsman-bowler-all">Bowler</h1>
-                        {Bowler.map((bowl, key) => (
-                            <h3 key={key}>
-                                <img className="icon" src={ball} alt="bat" />{bowl}
-                            </h3>
-                        ))}
+                        <Teamscard>
+                            {Bowler.map((bowl, key) => (
+                                <h3 key={key}>
+                                    <img className="icon" src={ball} alt="bat" />{bowl}
+                                </h3>
+                            ))}
+                        </Teamscard>
                     </Teams>
                 </SubContainer>
             </Container>
