@@ -34,15 +34,12 @@ export const SubContainer = styled.div`
         color: blue;
         text-decoration: none;
         cursor: pointer;
-<<<<<<< HEAD
     }
     .icon-player {
         width: 50%;
         // height: 150px;
         float: right;
         border-radius: 50%;
-=======
->>>>>>> 7594219bc9143ad8e96ace14c1258ca5bce66a74
     }
     .squad-router {
         background: #159354;
@@ -147,13 +144,10 @@ export const SubContainer = styled.div`
         color: #666;
         font-weight: bold;
     }
-<<<<<<< HEAD
     .Player-heading {
         text-align: center;
         color: #326394;
     }
-=======
->>>>>>> 7594219bc9143ad8e96ace14c1258ca5bce66a74
 `;
 
 export const Divider = styled.hr`
@@ -199,7 +193,6 @@ export const Teamscard = styled.div`
         font-weight: bold;
         margin: 0;
     }
-<<<<<<< HEAD
     .profile-inform {
         margin-left: 10px;
         font-size: 16px;
@@ -212,6 +205,4 @@ export const Teamscard = styled.div`
         padding: 20px;
         padding-left: 40px;
     }
-=======
->>>>>>> 7594219bc9143ad8e96ace14c1258ca5bce66a74
 `;
