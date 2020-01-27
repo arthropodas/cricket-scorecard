@@ -14,8 +14,6 @@ import Keeper from './PlayerProfile/Keeper';
 import AllRounder from './PlayerProfile/AllRounder';
 import Bowler from './PlayerProfile/Bowler';
 import Batsman  from './PlayerProfile/Batsman';
-=======
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
 
 function App() {
   return (
@@ -26,7 +24,6 @@ function App() {
         <Route path="/ENG" component={Team2} />
         <Route path="/matches" component={UpcomingMatches} />
         <Route path="/profile" component={Player} />
-<<<<<<< HEAD
         <Route path="/Amla" component={PlayerRsa} />
         <Route path="/Anderson" component={PlayerEng} />
         <Route path="/cap" component={Captain} />
@@ -34,8 +31,6 @@ function App() {
         <Route path="/allrounders" component={AllRounder} />
         <Route path="/bowlers" component={Bowler} />
         <Route path="/batsman" component={Batsman} />
-=======
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
       </div>
     </Router>
   );
