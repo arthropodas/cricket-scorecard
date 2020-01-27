@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { Container, SubContainer, Divider } from './styles';
+import { Container, SubContainer } from './styles';
 import history from '../history';
 import Batsman from './Batsman';
 import Bowler from './Bowler';
 
+
 const Country = [
     {
+      id: 1,
       name: 'England',
       value: 'ENG',
       score1st: 269,
@@ -22,6 +24,7 @@ const Country = [
 
 const Country2 = [
     {
+        id: 2,
         name: 'South Africa',
         value: 'RSA',
         score1st: 223,
@@ -122,24 +125,23 @@ class ScoreCard extends Component {
     }
   
     render() {
-        const CRR = this.state.runRate * (Country2.score2nd % Country2.overs)
-        console.log('gfc', CRR);
       return (
         <Container>
           <SubContainer>
-            {Country.map((Country, key) => (
-                <h2 className="country-with-scores" key={key}>
+            {Country.map((Country, t1) => (
+                <h2 className="country-with-scores" key={t1}>
                     {Country.value} {Country.score1st}{Country.allout1st}, {Country.score2nd}/{Country.declare}
                 </h2>
             ))}
-            {Country2.map((Country, key) => {
+            {Country2.map((Country, t2) => {
+                const result = (Country.score2nd / Country.overs);
                 return (
                 <div>
-                    <h2 className="country-with-scores2" key={key}>
+                    <h2 className="country-with-scores2" key={t2}>
                         {Country.value} {Country.score1st}{Country.allout1st}, {Country.score2nd}/{Country.wic2nd} ({Country.overs})
-                        <span>CRR: {Country.score2nd / Country.overs}</span>
+                        <span>CRR: {result.toFixed(2)}</span>
                     </h2>
-                    <div className="runs-to-win" key={key}>
+                    <div className="runs-to-win" key={t2}>
                         Day 4: Stumps - {Country.name} need 316 runs to win
                     </div>
                 </div>
@@ -149,7 +151,6 @@ class ScoreCard extends Component {
             <hr></hr>
             <Bowler />
             <button className="squad-router eng" onClick={() => { history.push('/ENG') }}>SQUAD</button>
-            <Divider />
             <p className="select-field-feed">Choose any one to add!</p>
             <form onSubmit={this.handleSubmit}>
                 <select className="comm-selector" value={this.state.value} onChange={this.handleChange}>
@@ -159,12 +160,14 @@ class ScoreCard extends Component {
                 </select>
             </form>
             <hr />
-            <div>
+            <p className="link-upcoming-match" onClick={() => { history.push('/matches') }}>Upcoming</p>
+            <p className="link-upcoming-match" onClick={() => { history.push('/profile') }}>Player of All Time!</p>
+            <div className="dropdown-select-message">
                 {this.state.value}
             </div>
-            {Commentory.map((Commentory, key) => {
+            {Commentory.map((Commentory, over) => {
                 return (
-                <div className="country-with-scores2" key={key}>
+                <div className="country-with-scores2" key={over}>
                     <p className= "commentory">{Commentory.over} <span>{Commentory.comm}</span></p>
                 </div>
             )})}

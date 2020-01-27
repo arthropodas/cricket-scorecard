@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import history from '../../history';
 
 const StyledTableCell = withStyles(theme => ({
   head: {
@@ -32,13 +34,13 @@ function createData(name, Runs, Balls, four, six, RunRate) {
 }
 
 const rows = [
-  createData('Pieter Malan', 63, 73, 2, 0, 32.64),
-  createData('Keshav Maharaj', 2, 9, 0, 0, 22.22),
+  createData('Hashim Amla', 63, 73, 2, 0, 32.64),
+  createData('Imran Tahir', 2, 9, 0, 0, 22.22),
 ];
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 700,
+    // minWidth: 700,
   },
 });
 
@@ -59,18 +61,20 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                <a>{row.name}</a>
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.Runs}</StyledTableCell>
-              <StyledTableCell align="right">{row.Balls}</StyledTableCell>
-              <StyledTableCell align="right">{row.four}</StyledTableCell>
-              <StyledTableCell align="right">{row.six}</StyledTableCell>
-              <StyledTableCell align="right">{row.Runs / row.Balls * 100}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+          {rows.map((row) => {
+            const result = (row.Runs / row.Balls * 100);
+            return (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  <a onClick={() => { history.push('/Amla') }}>{row.name}</a>
+                </StyledTableCell>
+                <StyledTableCell align="right">{row.Runs}</StyledTableCell>
+                <StyledTableCell align="right">{row.Balls}</StyledTableCell>
+                <StyledTableCell align="right">{row.four}</StyledTableCell>
+                <StyledTableCell align="right">{row.six}</StyledTableCell>
+                <StyledTableCell align="right">{result.toFixed(2)}</StyledTableCell>
+              </StyledTableRow>
+          )})}
         </TableBody>
       </Table>
     </TableContainer>

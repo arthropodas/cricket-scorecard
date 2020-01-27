@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import history from '../../history';
 
 const StyledTableCell = withStyles(theme => ({
   head: {
@@ -38,7 +40,7 @@ const rows = [
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 700,
+    // minWidth: 700,
   },
 });
 
@@ -59,18 +61,20 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                <a>{row.name}</a>
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.over}</StyledTableCell>
-              <StyledTableCell align="right">{row.maiden}</StyledTableCell>
-              <StyledTableCell align="right">{row.runs}</StyledTableCell>
-              <StyledTableCell align="right">{row.wickets}</StyledTableCell>
-              <StyledTableCell align="right">{row.economy}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+          {rows.map((row) => {
+            const result = (row.runs / row.over);
+            return (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  <a onClick={() => { history.push('/Anderson') }}>{row.name}</a>
+                </StyledTableCell>
+                <StyledTableCell align="right">{row.over}</StyledTableCell>
+                <StyledTableCell align="right">{row.maiden}</StyledTableCell>
+                <StyledTableCell align="right">{row.runs}</StyledTableCell>
+                <StyledTableCell align="right">{row.wickets}</StyledTableCell>
+                <StyledTableCell align="right">{result.toFixed(2)}</StyledTableCell>
+              </StyledTableRow>
+          )})}
         </TableBody>
       </Table>
     </TableContainer>
