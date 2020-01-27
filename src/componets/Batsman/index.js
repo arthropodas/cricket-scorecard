@@ -36,7 +36,6 @@ function createData(name, Runs, Balls, four, six, RunRate) {
 const rows = [
   createData('Hashim Amla', 63, 73, 2, 0, 32.64),
   createData('Faf du Plesis', 63, 73, 2, 0, 32.64),
-  createData('Imran Tahir', 2, 9, 0, 0, 22.22),
 ];
 
 const useStyles = makeStyles({
