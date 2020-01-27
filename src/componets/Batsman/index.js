@@ -34,13 +34,21 @@ function createData(name, Runs, Balls, four, six, RunRate) {
 }
 
 const rows = [
+<<<<<<< HEAD
   createData('Hashim Amla', 63, 73, 2, 0, 32.64),
+=======
+  createData('Faf du Plesis', 63, 73, 2, 0, 32.64),
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
   createData('Imran Tahir', 2, 9, 0, 0, 22.22),
 ];
 
 const useStyles = makeStyles({
   table: {
+<<<<<<< HEAD
     // minWidth: 700,
+=======
+//     minWidth: 700,
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
   },
 });
 

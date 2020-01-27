@@ -31,8 +31,13 @@ class ENG extends Component {
                     <Teams>
                         <h1 className="batsman-bowler-all engt">Batsman</h1>
                         <Teamscard>
+<<<<<<< HEAD
                             {Batsman.map((bats, batm) => (
                                 <h3 key={batm}>
+=======
+                            {Batsman.map((bats, key) => (
+                                <h3 key={key}>
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                                     <img className="icon" src={bat} alt="bat" />{bats}
                                 </h3>
                             ))}
@@ -40,17 +45,28 @@ class ENG extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all engt">All Rounder</h1>
                         <Teamscard>
+<<<<<<< HEAD
                             {AllRounder.map((all, allro) => (
                                 <h3 key={allro}>
+=======
+                            {AllRounder.map((all, key) => (
+                                <h3 key={key}>
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                                     <img className="icon" src={batball} alt="bat" />{all}
                                 </h3>
                             ))}
                         </Teamscard>
                         <Divider />
                         <h1 className="batsman-bowler-all engt">Wicket Keeper</h1>
+<<<<<<< HEAD
                         <Teamscard onClick={() => { history.push('/cap') }}>
                             {Wk.map((Wk, keep) => (
                                 <h3 key={keep}>
+=======
+                        <Teamscard>
+                            {Wk.map((Wk, key) => (
+                                <h3 key={key}>
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                                     <img className="icon" src={wk} alt="bat" />{Wk}
                                 </h3>
                             ))}
@@ -58,8 +74,13 @@ class ENG extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all engt">Bowler</h1>
                         <Teamscard>
+<<<<<<< HEAD
                             {Bowler.map((bowl, bowler) => (
                                 <h3 key={bowler}>
+=======
+                            {Bowler.map((bowl, key) => (
+                                <h3 key={key}>
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                                     <img className="icon" src={ball} alt="bat" />{bowl}
                                 </h3>
                             ))}

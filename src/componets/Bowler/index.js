@@ -40,7 +40,11 @@ const rows = [
 
 const useStyles = makeStyles({
   table: {
+<<<<<<< HEAD
     // minWidth: 700,
+=======
+//     minWidth: 700,
+>>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
   },
 });
 
