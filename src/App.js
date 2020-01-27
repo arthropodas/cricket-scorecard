@@ -6,7 +6,6 @@ import Team2 from './componets/Squad/Team2';
 import history from './history';
 import UpcomingMatches from './UpcomingMatches';
 import Player from './PlayerProfile/Player';
-<<<<<<< HEAD
 import PlayerRsa from './PlayerProfile/PlayerRsa';
 import PlayerEng from './PlayerProfile/PlayerEng';
 import Captain from './PlayerProfile/Captain';
