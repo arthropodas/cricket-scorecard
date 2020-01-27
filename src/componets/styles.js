@@ -61,9 +61,7 @@ export const SubContainer = styled.div`
         &:hover {
             text-decoration: underline;
             cursor: pointer;
-<<<<<<< HEAD
             // font-size: 22px;
-=======
             font-size: 22px;
             font-weight: 900;
           }
@@ -77,7 +75,6 @@ export const SubContainer = styled.div`
             text-decoration: underline;
             cursor: pointer;
             font-size: 22px;
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
             font-weight: 900;
           }
     }
@@ -170,10 +167,7 @@ export const Matchescard = styled.div`
     height: 70px;
     border-radius: 7px;
     margin-bottom: 10px;
-<<<<<<< HEAD
     cursor: pointer;
-=======
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
     &:hover {
         box-shadow: 0 15px 16px 0 rgba(0,102,255,0.2);
       }
@@ -192,10 +186,7 @@ export const Teamscard = styled.div`
     width: 100%;
     border-radius: 7px;
     margin-bottom: 10px;
-<<<<<<< HEAD
     cursor: pointer;
-=======
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
     &:hover {
         box-shadow: 0 15px 16px 0 rgba(0,102,255,0.2);
       }
@@ -211,23 +202,16 @@ export const Teamscard = styled.div`
         font-size: 16px;
         font-weight: 900;
     }
-<<<<<<< HEAD
     thead {
         color: #666;
     }
-=======
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
     th {
         text-align: center;
     }
     td {
         padding: 20px;
         padding-left: 40px;
-<<<<<<< HEAD
         color: #326394;
     }
 `;
-=======
-    }
-`;
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
+

@@ -136,8 +136,6 @@ class UserDetail extends Component {
             <SubContainer>
                 <a onClick={() => { history.push('/') }}>--Back--</a>
                 <h1>Upcoming Matches</h1>
-                {Matches.map((Match, upcoming) => (
-                    <Matchescard key={upcoming}>
                 {Matches.map((Match, key) => (
                     <Matchescard key={key}>
                         <p className="match-date">{Match.date}</p>

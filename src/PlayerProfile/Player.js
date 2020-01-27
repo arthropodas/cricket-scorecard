@@ -199,8 +199,6 @@ class PlayerProfile extends Component {
                 <a onClick={() => { history.push('/') }}>---Back---</a>
                     {StarPlayer.map((name, topPlayer) => (
                         <div key={topPlayer}>
-                    {Profile.map((name, key) => (
-                        <div key={key}>
                             <img className="icon-player" src={name.imageURL} alt="sachin" />
                             <h2 className="Player-heading">{name.name}</h2>
                             <p>{name.profile}</p>
