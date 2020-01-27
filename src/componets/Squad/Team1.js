@@ -31,9 +31,6 @@ class RSA extends Component {
                     <Teams>
                         <h1 className="batsman-bowler-all">Batsman</h1>
                         <Teamscard onClick={() => { history.push('/batsman') }}>
-                            {Batsman.map((bats, batm) => (
-                                <h3 key={batm}>
-                        <Teamscard>
                             {Batsman.map((bats, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={bat} alt="bat" />{bats}
@@ -43,9 +40,6 @@ class RSA extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all">All Rounder</h1>
                         <Teamscard onClick={() => { history.push('/allrounders') }}>
-                            {AllRounder.map((all, allro) => (
-                                <h3 key={allro}>
-                        <Teamscard>
                             {AllRounder.map((all, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={batball} alt="bat" />{all}
@@ -55,9 +49,6 @@ class RSA extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all">Wicket Keeper</h1>
                         <Teamscard onClick={() => { history.push('/deKock') }}>
-                            {Wk.map((Wk, keep) => (
-                                <h3 key={keep}>
-                        <Teamscard>
                             {Wk.map((Wk, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={wk} alt="bat" />{Wk}
@@ -69,9 +60,6 @@ class RSA extends Component {
                         <Teamscard onClick={() => { history.push('/bowlers') }}>
                             {Bowler.map((bowl, bowler) => (
                                 <h3 key={bowler}>
-                        <Teamscard>
-                            {Bowler.map((bowl, key) => (
-                                <h3 key={key}>
                                     <img className="icon" src={ball} alt="bat" />{bowl}
                                 </h3>
                             ))}

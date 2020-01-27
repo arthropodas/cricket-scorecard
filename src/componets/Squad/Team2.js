@@ -31,8 +31,6 @@ class ENG extends Component {
                     <Teams>
                         <h1 className="batsman-bowler-all engt">Batsman</h1>
                         <Teamscard>
-                            {Batsman.map((bats, batm) => (
-                                <h3 key={batm}>
                             {Batsman.map((bats, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={bat} alt="bat" />{bats}
@@ -42,8 +40,6 @@ class ENG extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all engt">All Rounder</h1>
                         <Teamscard>
-                            {AllRounder.map((all, allro) => (
-                                <h3 key={allro}>
                             {AllRounder.map((all, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={batball} alt="bat" />{all}
@@ -53,9 +49,6 @@ class ENG extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all engt">Wicket Keeper</h1>
                         <Teamscard onClick={() => { history.push('/cap') }}>
-                            {Wk.map((Wk, keep) => (
-                                <h3 key={keep}>
-                        <Teamscard>
                             {Wk.map((Wk, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={wk} alt="bat" />{Wk}
@@ -65,8 +58,6 @@ class ENG extends Component {
                         <Divider />
                         <h1 className="batsman-bowler-all engt">Bowler</h1>
                         <Teamscard>
-                            {Bowler.map((bowl, bowler) => (
-                                <h3 key={bowler}>
                             {Bowler.map((bowl, key) => (
                                 <h3 key={key}>
                                     <img className="icon" src={ball} alt="bat" />{bowl}
