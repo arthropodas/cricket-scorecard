@@ -4,9 +4,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import history from '../history';
 import { Container, SubContainer, Teamscard, Divider } from '../componets/styles';
-<<<<<<< HEAD
 import { StarPlayer } from './PlayerData';
-=======
 
 const Profile = [
     {
@@ -186,7 +184,6 @@ const Profile = [
         },
     }
 ]
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
 
 class PlayerProfile extends Component {
     constructor(props) {
@@ -200,13 +197,10 @@ class PlayerProfile extends Component {
             <Container>
                 <SubContainer>
                 <a onClick={() => { history.push('/') }}>---Back---</a>
-<<<<<<< HEAD
                     {StarPlayer.map((name, topPlayer) => (
                         <div key={topPlayer}>
-=======
                     {Profile.map((name, key) => (
                         <div key={key}>
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                             <img className="icon-player" src={name.imageURL} alt="sachin" />
                             <h2 className="Player-heading">{name.name}</h2>
                             <p>{name.profile}</p>
@@ -236,11 +230,8 @@ class PlayerProfile extends Component {
                                     <Tbody>
                                         <Tr>
                                         <Td>50</Td>
-<<<<<<< HEAD
                                         <Td>{name.data.batting.tests.fifty}</Td>
-=======
                                         <Td>{name.data.bowling.tests.fifty}</Td>
->>>>>>> fb233cecd10d6cfe1801dbdd8d5b2d40efeed48c
                                         <Td>{name.data.batting.ODIs.fifty}</Td>
                                         <Td>{name.data.batting.T20Is.fifty}</Td>
                                         </Tr>
